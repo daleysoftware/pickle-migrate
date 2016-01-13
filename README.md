@@ -1,7 +1,5 @@
 # pickle-migrate
 
-*Work in progress.*
-
 `pickle-migrate` is a lightweight and simple migration tool for the `pickleDB`
 key-value store.
 
@@ -9,18 +7,15 @@ key-value store.
 
 ## Usage
 
-Using `pickle-migrate` is easy!
+See the `examples/` folder.
 
-```
->>> db = picklemigrate.load_and_migrate('example.db', False) 
->>> # TODO
-```
+## Installation
 
-## Install
+For production, use `pip install picklemigrate`.
 
-```
-pip install picklemigrate
-```
+For development, run `python setup.py develop`. You may wish to do so in a
+[virtual environment](https://virtualenvwrapper.readthedocs.org/en/latest/);
+see `setup.sh` for an example of this.
 
 ## License
 

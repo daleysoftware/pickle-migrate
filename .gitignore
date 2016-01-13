@@ -1,0 +1,4 @@
+env
+dist
+*.pyc
+picklemigrate.egg-info
