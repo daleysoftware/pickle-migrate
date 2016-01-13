@@ -23,7 +23,7 @@ class PickleMigrator(object):
         target_version = self.latest_version()
         current_version = self.current_version()
         for v in xrange(current_version + 1, target_version + 1):
-            self.do_single_idempotent_migration(v)
+            self.do_single_migration(v)
             self.db.set(SCHEMA_VERSION, v)
 
     @abc.abstractmethod
@@ -34,15 +34,16 @@ class PickleMigrator(object):
         return 0
 
     @abc.abstractmethod
-    def do_single_idempotent_migration(self, target_version):
+    def do_single_migration(self, target_version):
         """
-        Do a single migration idempotent migration to the `target_version` (pickleDB does not have
-        transactions, hence the requirement for idempotency).
+        Do a single migration idempotent migration to the `target_version`.
         """
         return
 
 
-def load_and_migrate(db_file, force_save, pickle_migrator_class):
-    db = pickledb.load(db_file, force_save)
+def load_and_migrate(db_file, pickle_migrator_class):
+    # Set force save to false, because we don't want to save when we have partially completed a
+    # migration.
+    db = pickledb.load(db_file, False)
     pickle_migrator_class(db).migrate()
     return db

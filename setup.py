@@ -9,7 +9,7 @@ with open('requirements.txt', 'r') as f:
 
 setuptools.setup(
     name='picklemigrate',
-    version='0.1.0',
+    version='0.1.1',
     description='picklemigrate',
     long_description='A lightweight and simple migration tool for the pickleDB key-value store',
     author='Matt Pillar',
