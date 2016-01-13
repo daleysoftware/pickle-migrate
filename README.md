@@ -1,13 +1,15 @@
-# pickleMIGRATE
+# pickle-migrate
 
 *Work in progress.*
 
-`pickleMIGRATE` is a lightweight and simple migration tool for the `pickleDB`
+`pickle-migrate` is a lightweight and simple migration tool for the `pickleDB`
 key-value store.
+
+<img src="images/pickle-migrate.jpg" alt="pickle-migrate"/>
 
 ## Usage
 
-Using `pickleMIGRATE` is easy!
+Using `pickle-migrate` is easy!
 
 ```
 >>> db = picklemigrate.load_and_migrate('example.db', False) 
@@ -22,5 +24,5 @@ pip install picklemigrate
 
 ## License
 
-`pickleMIGRATE` is available under the MIT license. See the LICENSE file for
+`pickle-migrate` is available under the MIT license. See the LICENSE file for
 more information.
