@@ -9,8 +9,8 @@ with open('requirements.txt', 'r') as f:
 
 setuptools.setup(
     name='picklemigrate',
-    version='0.1.1',
-    description='picklemigrate',
+    version='0.1.2',
+    description='NoSQL migration tool for pickleDB',
     long_description='A lightweight and simple migration tool for the pickleDB key-value store',
     author='Matt Pillar',
     author_email='matt@pillarcomputing.com',
