@@ -11,8 +11,6 @@ See the `examples/` folder.
 
 ## Installation
 
-For production, use `pip install picklemigrate`.
-
 For development, run `python setup.py develop`. You may wish to do so in a
 [virtual environment](https://virtualenvwrapper.readthedocs.org/en/latest/);
 see `setup.sh` for an example of this.
